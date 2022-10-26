@@ -11,13 +11,13 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class RabbitConfig {
-    private static final String HOST = "rabbit";
 
     public static final String DAILY_QUEUE_NAME = "daily_queue";
 
     public static final String ALERT_QUEUE_NAME = "alert_queue";
 
     public static final String ERROR_QUEUE_NAME = "error_queue";
+    private static final String HOST = "rabbit";
 
     @Bean
     public ConnectionFactory connectionFactory() {

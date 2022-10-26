@@ -10,10 +10,12 @@ public class MessageConsumerService {
     public void listenDailyQueue(String message) {
         System.out.println("Было получено сообщение: " + message + " источник - очередь: " + RabbitConfig.DAILY_QUEUE_NAME);
     }
+
     @RabbitListener(queues = RabbitConfig.ALERT_QUEUE_NAME)
     public void listenAlertQueue(String message) {
         System.out.println("Было получено сообщение: " + message + " источник - очередь: " + RabbitConfig.ALERT_QUEUE_NAME);
     }
+
     @RabbitListener(queues = RabbitConfig.ERROR_QUEUE_NAME)
     public void listenErrorQueue(String message) {
         System.out.println("Было получено сообщение: " + message + " источник - очередь: " + RabbitConfig.ERROR_QUEUE_NAME);
